@@ -1,0 +1,13 @@
+Steps to create the debian package:
+
+1: Get latest quagga debian package from
+http://archive.ubuntu.com/ubuntu/pool/main/q/quagga/quagga_0.99.24.1-2_amd64.deb
+
+2: Uncompress the debian binary package using 'ar':
+ar xv quagga_0.99.24.1-2_amd64.deb
+
+3: untar the control.tar.gz/control file and remove iproute2.
+The file 'diff' shows exactly what has changed. 
+
+4: Recreate the archive using
+ar rcv quagga_0.99.24.1-2_amd64-plumgrid.deb debian-binary  control.tar.gz  data.tar.xz
