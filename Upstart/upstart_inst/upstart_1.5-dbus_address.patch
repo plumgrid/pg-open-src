@@ -1,0 +1,12 @@
+diff -wur upstart-1.5.orig/dbus/upstart.h upstart-1.5/dbus/upstart.h
+--- upstart-1.5.orig/dbus/upstart.h	2012-03-05 08:30:23.000000000 -0800
++++ upstart-1.5/dbus/upstart.h	2015-05-26 19:47:44.535835349 -0700
+@@ -76,7 +76,7 @@
+ # ifdef DEBUG
+ #  define DBUS_ADDRESS_UPSTART "unix:abstract=/com/ubuntu/test_upstart"
+ # else
+-#  define DBUS_ADDRESS_UPSTART "unix:abstract=/com/ubuntu/upstart"
++#  define DBUS_ADDRESS_UPSTART "unix:abstract=/com/ubuntu/upstartlxc"
+ # endif
+ #endif
+ 

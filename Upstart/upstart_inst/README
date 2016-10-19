@@ -1,0 +1,10 @@
+# 1. Prepare the environment to build the package
+
+# 2. Extract the original package as-is
+
+# 3. Apply and document our patch(es)
+
+# 4. Build the package
+
+# NOTE: The above steps are automated through bash script given here.
+
