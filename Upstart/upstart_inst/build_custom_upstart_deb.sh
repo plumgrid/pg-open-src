@@ -1,3 +1,21 @@
+#
+# Copyright (c) 2016, PLUMgrid Inc, http://plumgrid.com
+#
+# This file is part of upstart_1.5-0ubuntu7.4_amd64, a modified version of 
+# upstart_1.5 used by PLUMgrid.
+# upstart_1.5-0ubuntu7.4_amd64 is a free software; you can redistribute it and/or modify
+# it under the terms of The GNU Lesser General Public License (LGPL), version 2.1, as 
+# published by the Free Software Foundation.
+# You may obtain a copy of the License at
+#
+#     LGPL v2.1: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
 #!/bin/bash
 
 set -e
@@ -18,7 +36,6 @@ zcat "${SRCDIR}/upstart_1.5-0ubuntu7.3.diff.gz" | patch -p0
 
 # apply and document our patch(es)
 pushd "${WORKDIR}"
-export DEBEMAIL="PLUMgrid package bot <eng@plumgrid.com>"
 patch -p1 < "${SRCDIR}/upstart_1.5-dbus_address.patch"
 debchange -i 'Add domain socket suffix for running inside shared network lxc container'
 
